@@ -27,4 +27,5 @@ public class InnerComments {
     @ManyToOne()
     @JoinColumn(name = "comment_id")
     private int commentId;
+    private LocalDate updatedTime;
 }
