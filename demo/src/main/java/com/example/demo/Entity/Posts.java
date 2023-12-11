@@ -24,4 +24,5 @@ public class Posts {
     @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
+    private LocalDate updatedTime;
 }
