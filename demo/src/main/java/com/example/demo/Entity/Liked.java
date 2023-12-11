@@ -26,5 +26,6 @@ public class Liked {
     @JoinColumn(name = "post_id")
     private int postId;
     private LocalTime likedTime;
+    private LocalDate updatedTime;
 
 }
