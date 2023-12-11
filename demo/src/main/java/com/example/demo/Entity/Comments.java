@@ -24,4 +24,5 @@ public class Comments {
     @JoinColumn(name = "user_id")
     private int user_id;
     private LocalDate postedTime;
+    private LocalDate updatedTime;
 }
