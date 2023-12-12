@@ -1,9 +1,7 @@
-package com.example.demo.Entity;
+package com.example.demo.Dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import com.example.demo.Entity.Posts;
+import com.example.demo.Entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,17 +11,12 @@ import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
-@Entity
 @NoArgsConstructor
 @Builder
-public class Comments {
-    @Id
+
+public class CommentsDto {
     private int comment_id;
-    @ManyToOne()
-    @JoinColumn(name = "post_id")
     private Posts post;
-    @ManyToOne()
-    @JoinColumn(name = "user_id")
     private User user;
     private LocalDate postedTime;
     private LocalDate updatedTime;

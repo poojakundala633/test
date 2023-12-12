@@ -1,6 +1,7 @@
 package com.example.demo.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @Builder
 public class InnerComments {
+    @Id
     private int id;
     private String comments;
     private String userName;
@@ -26,6 +28,5 @@ public class InnerComments {
 
     @ManyToOne()
     @JoinColumn(name = "comment_id")
-    private int commentId;
-    private LocalDate updatedTime;
+    private Comments comment;
 }
